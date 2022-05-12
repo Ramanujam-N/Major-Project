@@ -13,17 +13,20 @@ The datasets we chose for the task of training an ML model were the CSE-CIC-IDS-
 
 ## Approach
 The dataset provides two columns as targets one with normal-not normal values and one with attack type values. We found that classifying by attack type and aggregating the results to normal and abnormal traffic gave us better results than classifying on normal/abnormal traffic. Thus, our problem is categorized as a supervised multiclass classification problem. supported the papers we mentioned we selected the utilization of three algorithms to specialize in the issue:
-Decision Tree Classifier
-Random Forest Classifier
-Support Vector Machine. 
-Logistic Regression.
-XGBoost Classifier.
-
+<ul>
+<li>Decision Tree Classifier</li>
+<li>Random Forest Classifier</li>
+<li>Support Vector Machine.</li> 
+<li>Logistic Regression.</li>
+<li>XGBoost Classifier.</li>
+</ul>
 Stacked Generalization (also known as Stacking ) is a type of ensemble ML algorithm. It involves combining the predictions from multiple machine learning models on the same dataset, like bagging and boosting.
 Unlike bagging, the models we make use of are typically different but fit on the same dataset. Unlike boosting, a single model has been used to fit over the predictions from the base models 
 The architecture of a stacking model generally has two and above base models, known as level-0 models, and a meta-model that fits over the predictions of the base models, known as a level-1 model.
-Level-0 Models (Base-Models): Models fit on the train set and predictions are made into a dataset for the meta-model.
-Level-1 Model (Meta-Model): Model that fits on predictions of the base models.
+<ul>
+<li>Level-0 Models (Base-Models): Models fit on the train set and predictions are made into a dataset for the meta-model.</li>
+<li>Level-1 Model (Meta-Model): Model that fits on predictions of the base models.</li>
+</ul>
 
 ## Overview of results
 Training both binary and multi-class classifiers on the training set, it could be observed that the hypothesis of stacking weaker learners into a strong learner is true. Although the stacked ensemble is not vastly different from that of the strongest level 0 base learner, it still outperforms it by an appreciable margin. Considering that this stacked ensemble model did not look at the training data at all and identifies the cases in which our strongest base learner gets the predictions wrong and gives some weightage to other weaker learners to improve the strongest prediction even further. 
