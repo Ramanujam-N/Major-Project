@@ -20,9 +20,11 @@ The dataset provides two columns as targets one with normal-not normal values an
 <li>Logistic Regression.</li>
 <li>XGBoost Classifier.</li>
 </ul>
+
 Stacked Generalization (also known as Stacking ) is a type of ensemble ML algorithm. It involves combining the predictions from multiple machine learning models on the same dataset, like bagging and boosting.
 Unlike bagging, the models we make use of are typically different but fit on the same dataset. Unlike boosting, a single model has been used to fit over the predictions from the base models 
 The architecture of a stacking model generally has two and above base models, known as level-0 models, and a meta-model that fits over the predictions of the base models, known as a level-1 model.
+
 <ul>
 <li>Level-0 Models (Base-Models): Models fit on the train set and predictions are made into a dataset for the meta-model.</li>
 <li>Level-1 Model (Meta-Model): Model that fits on predictions of the base models.</li>
