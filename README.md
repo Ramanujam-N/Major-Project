@@ -9,8 +9,8 @@ Our approach tries to redress this weakness by using an ensemble of machine lear
 ## Dataset Used 
 The datasets we chose for the task of training an ML model were the CSE-CIC-IDS-2018 and CIC-IDS-2017. These datasets have been constructed such that they effectively capture a real-world network attack. The data creators in their paper described in their seminal paper the notion of profiles to generate cybersecurity datasets. In their paper, they describe the use of M profiles in an attempt to make the attack setting simple. A straightforward way to accomplish this is by having humans interpret and act it out. In a more ideal setting, we would have an independent agent with compilers to carry them out. Some examples of the attacks carried out include Heartleech, Botnet, DDos, Dos, Infiltration. On the other hand B profile can be understood as having ML and Statistical models capture the behaviour of the malicious user and have it perform attacks.
 
-<!> table image , Distribution of different types of attacks in both datasets. image
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)</!>
+<!-- table image , Distribution of different types of attacks in both datasets. image
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true) --!>
 
 ## Approach
 The dataset provides two columns as targets one with normal-not normal values and one with attack type values. We found that classifying by attack type and aggregating the results to normal and abnormal traffic gave us better results than classifying on normal/abnormal traffic. Thus, our problem is categorized as a supervised multiclass classification problem. supported the papers we mentioned we selected the utilization of three algorithms to specialize in the issue:
@@ -31,5 +31,5 @@ Training both binary and multi-class classifiers on the training set, it could b
 
 We present the different metrics commonly used for classification. Proposing accuracy is perhaps not the best measure although not completely ignoring it, we look at ROC score which signifies to some degree how confidently the model identifies what it does.  It tells how much the model is capable of distinguishing between classes. We also look at the individual confusion matrices for binary classification and the final confusion matrix of the stacked ensemble for multi-class classification as well.
 
-<!>Add images<!>
+<!-- Add images --!>
 
